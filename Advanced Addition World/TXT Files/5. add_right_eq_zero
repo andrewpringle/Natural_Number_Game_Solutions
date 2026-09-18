@@ -1,0 +1,8 @@
+cases b with d
+intro h
+rw [add_zero] at h
+exact h
+intro h
+rw [add_succ] at h
+apply succ_ne_zero at h
+cases h
