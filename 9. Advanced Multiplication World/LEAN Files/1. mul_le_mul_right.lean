@@ -1,0 +1,10 @@
+theorem mul_le_mul_right (a b t : ℕ) : a ≤ b → a * t ≤ b * t := by
+  induction t
+  rw [mul_zero, mul_zero]
+  apply le_refl 0
+  rw [mul_succ, mul_succ]
+  cases n_ih
+  cases h
+  use w + w_1
+  rw [h_1, h_2]
+  simp_add
