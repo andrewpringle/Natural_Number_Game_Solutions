@@ -1,0 +1,9 @@
+theorem add_comm (a b : ℕ) : a + b = b + a := by
+  induction b with d hd
+  rw [add_zero]
+  rw [zero_add]
+  rfl
+  rw [add_succ]
+  rw [succ_add]
+  rw [hd]
+  rfl
