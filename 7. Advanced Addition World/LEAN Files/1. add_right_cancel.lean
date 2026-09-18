@@ -1,0 +1,11 @@
+theorem add_right_cancel (a b n : ℕ) : a + n = b + n → a = b := by
+  induction n with d hd
+  repeat rw [add_zero]
+  intro h
+  exact h
+  repeat rw [add_succ]
+  intro h
+  apply succ_inj at h
+  rw [hd]
+  rfl
+  exact h
