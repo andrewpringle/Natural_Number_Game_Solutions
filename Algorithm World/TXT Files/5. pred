@@ -1,0 +1,4 @@
+rw [← pred_succ a]
+rw [h]
+rw [pred_succ b]
+rfl
