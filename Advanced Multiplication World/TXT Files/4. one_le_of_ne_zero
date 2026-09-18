@@ -1,0 +1,7 @@
+cases a
+contrapose ha
+decide
+use a_1
+rw [add_comm]
+rw [succ_eq_add_one]
+rfl
