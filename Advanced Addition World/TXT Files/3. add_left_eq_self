@@ -1,0 +1,6 @@
+intro h
+rw [← add_zero y] at h
+nth_rewrite 1 [add_zero] at h
+rw [add_comm] at h
+apply add_left_cancel at h
+exact h
