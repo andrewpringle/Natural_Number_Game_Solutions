@@ -1,0 +1,11 @@
+cases x with d
+left
+rfl
+right
+cases hx
+cases w
+symm
+rw [add_zero] at h
+exact h
+rw [succ_add, add_succ] at h
+cases h
