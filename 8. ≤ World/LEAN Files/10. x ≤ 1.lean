@@ -1,0 +1,12 @@
+theorem le_one (x : ℕ) : x ≤ 1 → x = 0 ∨ x = 1 := by
+  cases x with d
+  left
+  rfl
+  right
+  cases hx
+  cases w
+  symm
+  rw [add_zero] at h
+  exact h
+  rw [succ_add, add_succ] at h
+  cases h

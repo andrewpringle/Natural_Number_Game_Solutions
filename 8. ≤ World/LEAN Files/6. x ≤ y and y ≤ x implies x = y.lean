@@ -1,0 +1,12 @@
+theorem le_antisymm (x y : ℕ) : x ≤ y → y ≤ x → x = y := by
+  cases hxy with d hd
+  cases hyx with a ha
+  rw [hd] at ha
+  rw [add_assoc] at ha
+  symm at ha
+  apply add_right_eq_self at ha
+  apply add_right_eq_zero at ha
+  rw [ha] at hd
+  rw [add_zero] at hd
+  symm at hd
+  exact hd
